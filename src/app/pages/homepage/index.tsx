@@ -20,20 +20,6 @@ export default function HomePage() {
     message: ''
   });
 
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    // Load dark mode preference from localStorage
-    const savedMode = localStorage.getItem('darkMode');
-    if (savedMode === 'true') {
-      setDarkMode(true);
-      document.documentElement.classList.add('dark');
-    } else {
-      setDarkMode(false);
-      document.documentElement.classList.remove('dark');
-    }
-  }, []);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
